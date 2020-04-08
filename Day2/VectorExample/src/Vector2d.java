@@ -20,14 +20,17 @@ public final class Vector2d extends AbstractVector {
     public AbstractVector addition(AbstractVector a, AbstractVector b) {
         return new Vector2d((a.getX() + b.getX()), (a.getY() + b.getY()));
     }
+
     @Override
-    public AbstractVector substraction(AbstractVector a, AbstractVector b) {
+    public AbstractVector subtraction(AbstractVector a, AbstractVector b) {
         return new Vector2d((a.getX() - b.getX()), (a.getY() - b.getY()));
     }
+
     @Override
-    public AbstractVector scalarMultiple(AbstractVector a) {
-        return new Vector2d((this.getX() * a.getX()), (this.getY() * a.getY()));
+    public double scalarMultiple(AbstractVector a) {
+        return (this.getX() * a.getX()) + (this.getY() * a.getY());
     }
+
     @Override
     public AbstractVector multipleVectors(AbstractVector a, AbstractVector b) {
         double vecX = a.getY() * b.getX() - a.getX() * b.getY();

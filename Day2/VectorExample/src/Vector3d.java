@@ -26,14 +26,17 @@ public final class Vector3d extends AbstractVector {
     public AbstractVector addition(AbstractVector a, AbstractVector b) {
         return new Vector3d((a.getX() + b.getX()), (a.getY() + b.getY()), (a.getZ() + b.getZ()));
     }
+
     @Override
-    public AbstractVector substraction(AbstractVector a, AbstractVector b) {
+    public AbstractVector subtraction(AbstractVector a, AbstractVector b) {
         return new Vector3d((a.getX() - b.getX()), (a.getY() - b.getY()), (a.getZ() - b.getZ()));
     }
+
     @Override
-    public AbstractVector scalarMultiple(AbstractVector a) {
-        return new Vector3d((this.getX() * a.getX()), (this.getY() * a.getY()), (this.getZ() * a.getZ()));
+    public double scalarMultiple(AbstractVector a) {
+        return (this.getX() * a.getX()) + (this.getY() * a.getY()) + (this.getZ() * a.getZ());
     }
+
     @Override
     public AbstractVector multipleVectors(AbstractVector a, AbstractVector b) {
         double vecX = a.getY() * b.getZ() - a.getZ() * b.getY();

@@ -22,9 +22,9 @@ public abstract class AbstractVector {
 
     public abstract AbstractVector addition(AbstractVector a, AbstractVector b);
 
-    public abstract AbstractVector substraction(AbstractVector a, AbstractVector b);
+    public abstract AbstractVector subtraction(AbstractVector a, AbstractVector b);
 
-    public abstract AbstractVector scalarMultiple(AbstractVector a);
+    public abstract double scalarMultiple(AbstractVector a);
 
     public abstract AbstractVector multipleVectors(AbstractVector a, AbstractVector b);
 
